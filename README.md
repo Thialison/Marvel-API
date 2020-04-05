@@ -21,7 +21,4 @@ gem install httparty
    cucumber 
    ou
    rake
-   
-4. Executando somente um cenário (utilize as tags): 
-   Ex.: cucumber -t @first
 ```

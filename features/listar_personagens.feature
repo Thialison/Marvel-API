@@ -1,32 +1,27 @@
 # language: pt
-# coding: utf-8
 
 @listar_personagens
-Funcionalidade: Listar informações dos personagens da Marvel
+Funcionalidade: Listar personagens da Marvel
 
-Como usuário dessa api
+Como usuário
 Gostaria de listar 5 personagens;
+Gostaria de listar informações sobre um personagem específico;
+Gostaria de filtrar comics de acordo com um personagem específico. 
 
-Como usuário dessa api 
-Gostaria de listar informações sobre um usuário específico;
+Contexto: 
+  Dado que acesse o EndPoint characters
 
-Como usuário dessa api 
-Gostaria de filtrar comics de acordo com um usuário específico. 
-
-@get @first
+@get
 Cenário: Listar 5 personagens da Marvel
-Dado que acesse o EndPoint characters
-Quando buscar por 5 personagens
-Então devo visualizar as informações dos 5 personagens
+  Quando buscar por 5 personagens
+  Então devo visualizar as informações dos 5 personagens
 
-@get @second
+@get
 Cenário: Listar único personagem da Marvel
-Dado que acesse o EndPoint characters
-Quando buscar por pelo id "1009351"
-Então devo visualizar a informação do personagem
+  Quando buscar por pelo id "1009351"
+  Então devo visualizar a informação do personagem
 
-@get @third
+@get
 Cenário: Listar comics de único personagem da Marvel
-Dado que acesse o EndPoint characters
-Quando buscar as comics de um único personagem
-Então devo visualizar as comics do personagem
+  Quando buscar as comics de um único personagem
+  Então devo visualizar as comics do personagem
